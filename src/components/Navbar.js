@@ -1,10 +1,10 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+//   Link
+// } from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
@@ -41,7 +41,7 @@ export default function Navbar() {
         </Grid>
         <Grid container spacing={3}>
           <Grid item xs>
-            <Paper className={classes.paper}>Experiences</Paper>
+            <Paper className={classes.paper}>Experience</Paper>
           </Grid>
           <Grid item xs={6}>
             <Paper className={classes.paper}>Freelance Services</Paper>

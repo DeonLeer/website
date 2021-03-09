@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {ThemeProvider} from "styled-components";
 import { GlobalStyle } from "./components/GlobalStyle";
 import { lightTheme, darkTheme } from "./components/Themes"
@@ -10,6 +10,7 @@ import { lightTheme, darkTheme } from "./components/Themes"
 //   Link
 // } from "react-router-dom";
 import Navbar from "./components/Navbar"
+import Page from "./components/pages/index"
 
 export default function App() {
   const [theme, setTheme] = useState('light');
@@ -31,6 +32,7 @@ export default function App() {
             </div>
             <Navbar />
           </div>
+          <Page />
         </div>
       </>
     </ThemeProvider>
