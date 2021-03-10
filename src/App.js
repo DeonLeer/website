@@ -3,12 +3,14 @@ import React, { useState } from "react";
 import {ThemeProvider} from "styled-components";
 import { GlobalStyle } from "./components/GlobalStyle";
 import { lightTheme, darkTheme } from "./components/Themes"
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
-//   Link
-// } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
+
 import Navbar from "./components/Navbar"
 import About_Me from './components/pages/About_Me';
 import Experience from './components/pages/Experience';
@@ -31,13 +33,18 @@ export default function App() {
       <div className="App">
         <Navbar 
           setMode={themeToggler}
-          notMode={notTheme}
-        />
+          notMode={notTheme}/>
+
         <About_Me />
+
         <Projects />
+
         <Resume />
+
         <Experience />
+
         <Freelance_Services />
+
         <Contact_Me />
       </div>
     </ThemeProvider>
