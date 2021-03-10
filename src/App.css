@@ -29,8 +29,7 @@
   padding-right: 5px;
 }
 .Navbar img {
-  height: 200px;
-  width: 280px
+  width: 12vw;
 }
 .NavbarPosition {
   position: fixed;
@@ -45,7 +44,8 @@
   margin: 25px
 }
 .NavLinks {
-  width: 50%;
+  font-size: 25px;
+  width: 60%;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;

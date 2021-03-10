@@ -6,7 +6,7 @@ export default function Navbar(props) {
     <div className="Navbar" id="Navbar">
       <div className="NameAndToggle">
         <button onClick={props.setMode}>{props.notMode} Mode</button>
-        <img src={'/logo_black.png'}/>
+        <img src={props.image}/>
       </div>
       <div className="NavLinks">
         <table>

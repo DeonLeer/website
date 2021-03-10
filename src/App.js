@@ -35,6 +35,8 @@ export default function App() {
     behavior: "smooth",
     top: (reference.current.offsetTop - (windowHeight * 0.17))
   })};
+  const whiteLogo = "/logo_white.png";
+  const blackLogo = "/logo_black.png";
 
   return (
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
@@ -42,7 +44,7 @@ export default function App() {
       <div className="App">
         <div className="NavbarPosition" style={theme === 'light' ? { backgroundColor: 'white' } : { backgroundColor: '#363537' }}>
           <Navbar 
-            
+            image={ theme === 'light' ? blackLogo : whiteLogo }
             setMode={themeToggler}
             notMode={notTheme}
             aboutMe={() => scroll(aboutMe)}
