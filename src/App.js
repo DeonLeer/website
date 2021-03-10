@@ -1,23 +1,16 @@
 import './App.css';
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import {ThemeProvider} from "styled-components";
 import { GlobalStyle } from "./components/GlobalStyle";
 import { lightTheme, darkTheme } from "./components/Themes"
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import { HashLink } from 'react-router-hash-link';
 
 import Navbar from "./components/Navbar"
-import About_Me from './components/pages/About_Me';
+import AboutMe from './components/pages/AboutMe';
 import Experience from './components/pages/Experience';
-import Freelance_Services from './components/pages/Freelance_Services';
+import FreelanceServices from './components/pages/FreelanceServices';
 import Projects from './components/pages/Projects';
 import Resume from './components/pages/Resume';
-import Contact_Me from './components/pages/Contact_Me';
+import ContactMe from './components/pages/ContactMe';
 
 
 export default function App() {
@@ -40,11 +33,9 @@ export default function App() {
     let windowHeight = window.innerHeight
     window.scrollTo({
     behavior: "smooth",
-    top: (reference.current.offsetTop - (windowHeight * 0.16))
+    top: (reference.current.offsetTop - (windowHeight * 0.17))
   })};
 
-
-  console.log(aboutMe)
   return (
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
       <GlobalStyle/>
@@ -63,7 +54,7 @@ export default function App() {
             />
         </div>
         <div ref={aboutMe}>
-          <About_Me/>
+          <AboutMe/>
         </div>
         <div ref={projects}>
           <Projects />
@@ -75,10 +66,10 @@ export default function App() {
           <Experience />
         </div>
         <div ref={freelanceServices}>
-          <Freelance_Services />
+          <FreelanceServices />
         </div>
         <div ref={contactMe}>
-          <Contact_Me />
+          <ContactMe />
         </div>
       </div>
     </ThemeProvider>

@@ -22,19 +22,38 @@
 }
 .Navbar {
   display: flex;
-  height: 16%;
   flex-direction: row;
   justify-content: space-between;
   padding-left: 5px;
   padding-top: 5px;
   padding-right: 5px;
 }
+.Navbar img {
+  height: 200px;
+  width: 280px
+}
 .NavbarPosition {
   position: fixed;
-  height: 17%;
   width: 100%;
   box-shadow: 8px 8px 4px grey;
 }
 .AboutMe {
   padding-top: 10%;
 }
+.NameAndToggle h1 {
+  font-size: 50px;
+  margin: 25px
+}
+.NavLinks {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-bottom: 2%;
+  padding-right: 4%;
+}
+.NavLinks table {
+  width: 65%;
+}
+
+/* 217882 */
