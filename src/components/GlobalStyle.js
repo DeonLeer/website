@@ -4,7 +4,7 @@ export const GlobalStyle = createGlobalStyle`
     background: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
     font-family: IBM Plex Serif;
-    font-size: 30px;
+    font-size: 20px;
     transition: all 0.50s linear;
   }
   `

@@ -22,8 +22,19 @@
 }
 .Navbar {
   display: flex;
+  height: 16%;
   flex-direction: row;
   justify-content: space-between;
   padding-left: 5px;
   padding-top: 5px;
+  padding-right: 5px;
+}
+.NavbarPosition {
+  position: fixed;
+  height: 17%;
+  width: 100%;
+  box-shadow: 8px 8px 4px grey;
+}
+.AboutMe {
+  padding-top: 10%;
 }

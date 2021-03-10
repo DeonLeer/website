@@ -9,6 +9,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
+
 // creating styles for classes
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,7 +26,7 @@ export default function Navbar(props) {
   const classes = useStyles();
 
   return (
-    <div className="Navbar">
+    <div className="Navbar" id="Navbar">
       <div className="NameAndToggle">
         <button onClick={props.setMode}>{props.notMode} Mode</button>
         <h1>Deon Leer</h1>
@@ -33,24 +34,24 @@ export default function Navbar(props) {
       <div className={classes.root}>
         <Grid container spacing={3}>
           <Grid item xs>
-            <Paper className={classes.paper}>About Me</Paper>
+            <Paper onClick={props.aboutMe} className={classes.paper}>About Me</Paper>
           </Grid>
           <Grid item xs>
-            <Paper className={classes.paper}>Projects</Paper>
+            <Paper onClick={props.projects} className={classes.paper}>Projects</Paper>
           </Grid>
           <Grid item xs>
-            <Paper className={classes.paper}>Resume</Paper>
+            <Paper onClick={props.resume} className={classes.paper}>Resume</Paper>
           </Grid>
         </Grid>
         <Grid container spacing={3}>
           <Grid item xs>
-            <Paper className={classes.paper}>Experience</Paper>
+            <Paper onClick={props.experience} className={classes.paper}>Experience</Paper>
           </Grid>
           <Grid item xs={6}>
-            <Paper className={classes.paper}>Freelance Services</Paper>
+            <Paper onClick={props.freelanceServices} className={classes.paper}>Freelance Services</Paper>
           </Grid>
           <Grid item xs>
-            <Paper className={classes.paper}>Contact Me</Paper>
+            <Paper onClick={props.contactMe} className={classes.paper}>Contact Me</Paper>
           </Grid>
         </Grid>
       </div>
