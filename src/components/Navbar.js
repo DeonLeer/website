@@ -12,8 +12,7 @@ import Grid from '@material-ui/core/Grid';
 // creating styles for classes
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
-    width: '50vw'
+    width: '50%'
   },
   paper: {
     padding: theme.spacing(2),
@@ -22,11 +21,15 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Navbar() {
+export default function Navbar(props) {
   const classes = useStyles();
 
   return (
-    <div>
+    <div className="Navbar">
+      <div className="NameAndToggle">
+        <button onClick={props.setMode}>{props.notMode} Mode</button>
+        <h1>Deon Leer</h1>
+      </div>
       <div className={classes.root}>
         <Grid container spacing={3}>
           <Grid item xs>
@@ -47,7 +50,7 @@ export default function Navbar() {
             <Paper className={classes.paper}>Freelance Services</Paper>
           </Grid>
           <Grid item xs>
-            <Paper className={classes.paper}>Social Medias</Paper>
+            <Paper className={classes.paper}>Contact Me</Paper>
           </Grid>
         </Grid>
       </div>

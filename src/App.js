@@ -10,7 +10,12 @@ import { lightTheme, darkTheme } from "./components/Themes"
 //   Link
 // } from "react-router-dom";
 import Navbar from "./components/Navbar"
-import Page from "./components/pages/index"
+import About_Me from './components/pages/About_Me';
+import Experience from './components/pages/Experience';
+import Freelance_Services from './components/pages/Freelance_Services';
+import Projects from './components/pages/Projects';
+import Resume from './components/pages/Resume';
+import Contact_Me from './components/pages/Contact_Me';
 
 export default function App() {
   const [theme, setTheme] = useState('light');
@@ -22,19 +27,19 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
-      <>
       <GlobalStyle/>
-        <div className="App">
-          <div className="Header">
-            <div className="NameAndToggle">
-              <button onClick={themeToggler}>{notTheme} Mode</button>
-              <h1>Deon Leer</h1>
-            </div>
-            <Navbar />
-          </div>
-          <Page />
-        </div>
-      </>
+      <div className="App">
+        <Navbar 
+          setMode={themeToggler}
+          notMode={notTheme}
+        />
+        <About_Me />
+        <Projects />
+        <Resume />
+        <Experience />
+        <Freelance_Services />
+        <Contact_Me />
+      </div>
     </ThemeProvider>
   );
 };

@@ -20,3 +20,10 @@
   justify-content: space-between;
   align-items: flex-start;
 }
+.Navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 5px;
+  padding-top: 5px;
+}
