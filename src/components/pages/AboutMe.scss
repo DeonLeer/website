@@ -1,0 +1,14 @@
+.AboutMe {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 13vh;
+  height: 90vh;
+}
+
+.AboutMeContent {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
