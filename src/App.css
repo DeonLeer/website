@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Serif');
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
 
 
 .App {
@@ -34,11 +35,9 @@
 .NavbarPosition {
   position: fixed;
   width: 100%;
-  box-shadow: 8px 8px 4px grey;
+  box-shadow: 2px 2px 2px grey;
 }
-.AboutMe {
-  padding-top: 10%;
-}
+
 .NameAndToggle h1 {
   font-size: 50px;
   margin: 25px
@@ -55,5 +54,54 @@
 .NavLinks table {
   width: 65%;
 }
+
+
+/* About Me */
+
+.AboutMe {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 13vh;
+  height: 90vh;
+}
+
+.AboutMeContent {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.text1 {
+  padding-right: 10vw;
+}
+.text1 h1 {
+  font-size: 3em;
+}
+.text1 h2 {
+  font-size: 1.5em;
+  text-align: left;
+}
+.ViewMore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 10vw;
+}
+.ViewMore:hover {
+  cursor: pointer;
+}
+.ViewMore p {
+  margin-bottom: 0px;
+}
+
+
+
+/* Projects */
+/* Resume */
+/* Experience */
+/* Freelance */
+/* Contact Me */
+
 
 /* 217882 */

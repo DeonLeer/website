@@ -11,6 +11,7 @@ import FreelanceServices from './components/pages/FreelanceServices';
 import Projects from './components/pages/Projects';
 import Resume from './components/pages/Resume';
 import ContactMe from './components/pages/ContactMe';
+import Bio from './components/pages/Bio'
 
 
 export default function App() {
@@ -28,6 +29,7 @@ export default function App() {
   const projects = useRef(null)
   const resume = useRef(null)
   const contactMe = useRef(null)
+  const bio = useRef(null)
 
   const scroll = (reference) => {
     let windowHeight = window.innerHeight
@@ -47,7 +49,7 @@ export default function App() {
             image={ theme === 'light' ? blackLogo : whiteLogo }
             setMode={themeToggler}
             notMode={notTheme}
-            aboutMe={() => scroll(aboutMe)}
+            aboutMe={() => scroll(bio)}
             projects={() => scroll(projects)}
             resume={() => scroll(resume)}
             experience={() => scroll(experience)}
@@ -56,7 +58,12 @@ export default function App() {
             />
         </div>
         <div ref={aboutMe}>
-          <AboutMe/>
+          <AboutMe 
+          viewMore={() => scroll(bio)}
+          />
+        </div>
+        <div ref={bio}>
+          <Bio/>
         </div>
         <div ref={projects}>
           <Projects />
