@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
-@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Serif');
-@import url('https://fonts.googleapis.com/css2?family=Roboto');
-
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext");
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Serif");
+@import url("https://fonts.googleapis.com/css2?family=Roboto");
 
 .App {
   text-align: center;
@@ -40,7 +39,7 @@
 
 .NameAndToggle h1 {
   font-size: 50px;
-  margin: 25px
+  margin: 25px;
 }
 .NavLinks {
   font-size: 25px;
@@ -55,23 +54,6 @@
   width: 65%;
 }
 
-
-/* About Me */
-
-.AboutMe {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  padding-top: 13vh;
-  height: 90vh;
-}
-
-.AboutMeContent {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
 .text1 {
   padding-right: 10vw;
 }
@@ -126,6 +108,5 @@
 /* Experience */
 /* Freelance */
 /* Contact Me */
-
 
 /* 217882 */

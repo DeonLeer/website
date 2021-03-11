@@ -1,7 +1,9 @@
-import React from "react";
-import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import React from "react"
+import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown"
+import "./AboutMe.scss"
+
 export default function AboutMe(props) {
-  return(
+  return (
     <div id="AboutMe" className="AboutMe">
       <div id="AboutMeContent" className="AboutMeContent">
         <div className="text1">
@@ -10,7 +12,7 @@ export default function AboutMe(props) {
           <h2>and This is my Portfolio Site</h2>
         </div>
         <div className="image1">
-          <img src='/portfolio2.png'/>
+          <img src="/portfolio2.png" />
         </div>
       </div>
       <div className="ViewMore" onClick={props.viewMore}>
@@ -18,6 +20,5 @@ export default function AboutMe(props) {
         <ArrowDropDownIcon />
       </div>
     </div>
-
   )
 }
