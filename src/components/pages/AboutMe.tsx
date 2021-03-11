@@ -2,10 +2,14 @@ import React from "react"
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown"
 import "./AboutMe.scss"
 
-export default function AboutMe(props) {
+interface Props {
+  onClickViewMore: () => void
+}
+
+export default function AboutMe({ onClickViewMore }: Props) {
   return (
-    <div id="AboutMe" className="AboutMe">
-      <div id="AboutMeContent" className="AboutMeContent">
+    <div className="AboutMe">
+      <div className="AboutMeContent">
         <div className="text1">
           <h1>Hi, My Name is Deon Leer</h1>
           <h2>I'm a Full Stack JavaScript Developer,</h2>
@@ -15,7 +19,7 @@ export default function AboutMe(props) {
           <img src="/portfolio2.png" />
         </div>
       </div>
-      <div className="ViewMore" onClick={props.viewMore}>
+      <div className="ViewMore" onClick={onClickViewMore}>
         <footer>View More</footer>
         <ArrowDropDownIcon />
       </div>
