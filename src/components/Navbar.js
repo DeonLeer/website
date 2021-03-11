@@ -15,7 +15,7 @@ export default function Navbar(props) {
     <div className="Navbar" id="Navbar">
       <div className="NameAndToggle">
         <Button onClick={props.setMode}>{props.notMode} Mode</Button>
-        <img src={props.image} />
+        <img src={props.image} alt="logo"/>
       </div>
       <div className="NavLinks">
         <table>

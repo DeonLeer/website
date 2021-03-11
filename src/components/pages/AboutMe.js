@@ -2,11 +2,8 @@ import React from "react"
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown"
 import "./AboutMe.scss"
 
-interface Props {
-  onClickViewMore: () => void
-}
 
-export default function AboutMe({ onClickViewMore }: Props) {
+export default function AboutMe(props) {
   return (
     <div className="AboutMe">
       <div className="AboutMeContent">
@@ -16,10 +13,10 @@ export default function AboutMe({ onClickViewMore }: Props) {
           <h2>and This is my Portfolio Site</h2>
         </div>
         <div className="image1">
-          <img src="/portfolio2.png" />
+          <img src="/portfolio2.png" alt="me:)"/>
         </div>
       </div>
-      <div className="ViewMore" onClick={onClickViewMore}>
+      <div className="ViewMore" onClick={props.onClickViewMore}>
         <footer>View More</footer>
         <ArrowDropDownIcon />
       </div>
