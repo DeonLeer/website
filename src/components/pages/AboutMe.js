@@ -10,7 +10,7 @@ export default function AboutMe(props) {
           <h2>and This is my Portfolio Site</h2>
         </div>
         <div className="image1">
-          <img src='/portfolio1.png'/>
+          <img src='/portfolio2.png'/>
         </div>
       </div>
       <div className="ViewMore" onClick={props.viewMore}>

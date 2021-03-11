@@ -19,7 +19,7 @@ export default function Navbar(props) {
             <td style={tdStyle}><Button onClick={props.resume} style={buttonStyle}>Resume</Button></td>
           </tr>
           <tr>
-            <td style={tdStyle}><Button onClick={props.projects} style={buttonStyle}>Projects</Button></td>
+            <td style={tdStyle}><Button onClick={props.projects} style={buttonStyle}>Experience</Button></td>
             <td style={tdStyle}><Button onClick={props.freelanceServices} style={buttonStyle}>Freelance Services</Button></td>
             <td style={tdStyle}><Button onClick={props.contactMe} style={buttonStyle}>Contact me</Button></td>
           </tr>

@@ -95,7 +95,31 @@
   margin-bottom: 0px;
 }
 
+/* Bio */
 
+.Bio {
+  height: 82.5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.BioContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.BioText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40vw;
+  padding-left: 15vw;
+}
+.BioText p {
+  text-align: end;
+  font-size: 1.15em;
+}
 
 /* Projects */
 /* Resume */

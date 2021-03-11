@@ -63,22 +63,34 @@ export default function App() {
           />
         </div>
         <div ref={bio}>
-          <Bio/>
+          <Bio 
+            viewMore={() => scroll(projects)}
+          />
         </div>
         <div ref={projects}>
-          <Projects />
+          <Projects
+            viewMore={() => scroll(resume)}
+          />
         </div>
         <div ref={resume}>
-          <Resume />
+          <Resume 
+            viewMore={() => scroll(experience)}
+          />
         </div>
         <div ref={experience}>
-          <Experience />
+          <Experience 
+            viewMore={() => scroll(freelanceServices)}
+          />
         </div>
         <div ref={freelanceServices}>
-          <FreelanceServices />
+          <FreelanceServices 
+            viewMore={() => scroll(contactMe)}
+          />
         </div>
         <div ref={contactMe}>
-          <ContactMe />
+          <ContactMe 
+            viewTop={() => scroll(aboutMe)}
+          />
         </div>
       </div>
     </ThemeProvider>
