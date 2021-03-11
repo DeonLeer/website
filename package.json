@@ -9,6 +9,11 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.1",
+    "@types/jest": "^26.0.20",
+    "@types/node": "^14.14.33",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.2",
+    "node-sass": "^5.0.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -19,19 +24,27 @@
     "react-scroll": "^1.8.2",
     "sass": "^1.32.8",
     "styled-components": "^5.2.1",
+    "typescript": "^4.2.3",
     "web-vitals": "^1.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "eslint": "eslint src/ --fix"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "rules": {
+      "semi": [
+        "error",
+        "never"
+      ]
+    }
   },
   "browserslist": {
     "production": [
@@ -44,5 +57,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-optional-chaining": "^7.13.8",
+    "@types/styled-components": "^5.1.7"
   }
 }
