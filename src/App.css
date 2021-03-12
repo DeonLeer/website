@@ -67,6 +67,7 @@
 .ViewMore {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 10vw;
 }
@@ -104,9 +105,62 @@
 }
 
 /* Projects */
+
+.Projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.Projects img {
+  width: 30vw;
+}
+.Projects footer {
+  padding-top: 15px;
+}
+.ProjectsList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
 /* Resume */
+
+.Resume {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 70vh;
+}
 /* Experience */
+.Experience {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 81vh
+}
 /* Freelance */
+
+.FreelanceServices {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 81vh
+}
+
 /* Contact Me */
+
+.ContactMe {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 81vh
+}
 
 /* 217882 */
