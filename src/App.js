@@ -47,6 +47,8 @@ export default function App() {
 
   const whiteLogo = "/logo_white.png"
   const blackLogo = "/logo_black.png"
+  const gitLogoDark = "/github_logo_dark.png"
+  const gitLogoLight = "/github_long_icon.png"
 
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
@@ -101,6 +103,7 @@ export default function App() {
         <div ref={contactMe}>
           <ContactMe
           viewTop={() => scroll(aboutMe)}
+          logo={theme === "light" ? gitLogoLight : gitLogoDark}
           />
         </div>
       </div>

@@ -38,7 +38,7 @@ export default function Navbar(props) {
           </tr>
           <tr>
             <td style={tdStyle}>
-              <Button onClick={props.projects} style={buttonStyle}>
+              <Button onClick={props.experience} style={buttonStyle}>
                 Experience
               </Button>
             </td>

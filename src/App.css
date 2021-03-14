@@ -160,7 +160,34 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 81vh
+  height: 81vh;
 }
+.contacts {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.email {
+  display: flex;
+  align-items: center;
+}
+.github {
+  display: flex;
+}
+.twitter {
+  display: flex;
+}
+.email img {
+  height: 6vh;
+}
+.github img {
+  width: 31vh;
+}
+.twitter img {
+  border-radius: 50%;
+  width: 10vh;
+}
+
 
 /* 217882 */
