@@ -163,14 +163,24 @@
   height: 81vh;
 }
 .contacts {
-  height: 50vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
 }
 .email {
   display: flex;
   align-items: center;
+  cursor: pointer;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+}
+.contact-form textarea {
+  height: 10vh;
 }
 .github {
   display: flex;
