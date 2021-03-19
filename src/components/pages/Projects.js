@@ -23,7 +23,7 @@ export default function Projects(props) {
     'https://raw.githubusercontent.com/celsinga/buy-sell-app/master/public/Screenshots/search.png',
     'https://raw.githubusercontent.com/DeonLeer/scheduler/master/docs/initial.png',
     'https://raw.githubusercontent.com/DeonLeer/tweeter/master/docs/desktop.png',
-    'https://raw.githubusercontent.com/DeonLeer/tweeter/master/docs/desktop.png'
+    'https://raw.githubusercontent.com/DeonLeer/jungle/master/public/homepage.png'
   ]
 
   const [loading, setLoading] = useState(true)
