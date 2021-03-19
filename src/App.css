@@ -1,10 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext");
 @import url("https://fonts.googleapis.com/css?family=IBM+Plex+Serif");
 @import url("https://fonts.googleapis.com/css2?family=Roboto");
+/* 
+body {
+  background-image: url("./image0.png");
+} */
 
 .App {
   text-align: center;
-  width: 99.5%;
+  width: 99.3%;
 }
 .Header {
   display: flex;
@@ -35,6 +39,7 @@
   position: fixed;
   width: 100%;
   box-shadow: 2px 2px 2px grey;
+  z-index: 1000;
 }
 
 .NameAndToggle h1 {
@@ -125,7 +130,6 @@
   align-items: flex-start;
 }
 
-
 /* Resume */
 
 .Resume {
@@ -141,7 +145,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 81vh
+  height: 81vh;
 }
 /* Freelance */
 
@@ -150,7 +154,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 81vh
+  height: 81vh;
 }
 
 /* Contact Me */
@@ -198,6 +202,5 @@
   border-radius: 50%;
   width: 10vh;
 }
-
 
 /* 217882 */

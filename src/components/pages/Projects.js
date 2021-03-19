@@ -1,11 +1,22 @@
 import React, { useState, useEffect } from "react"
 import ReactMarkdown from "react-markdown"
-import axios from 'axios'
-import stringConverter from '../../helper-functions/string-converter'
+import axios from "axios"
+import stringConverter from "../../helper-functions/string-converter"
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown"
+import {
+  Button,
+  Card,
+  CardContent,
+  Grid,
+  CardActionArea,
+  CardActions,
+  Typography,
+  CardMedia,
+} from "@material-ui/core"
+// import theGoat from "../../image0.png"
+// console.log(theGoat)
 
 export default function Projects(props) {
-
   const [loading, setLoading] = useState(true)
 
   const [readMe, setReadMe] = useState({
@@ -14,7 +25,7 @@ export default function Projects(props) {
     buySellApp: [],
     scheduler: [],
     tweeter: [],
-    jungle: []
+    jungle: [],
   })
 
   const [overview, setOverview] = useState({
@@ -23,28 +34,44 @@ export default function Projects(props) {
     buySellApp: [],
     scheduler: [],
     tweeter: [],
-    jungle: []
+    jungle: [],
   })
 
   const [display, setDisplay] = useState({
-    nbaDashboard: ("none"),
-    website: ("none"),
-    buySellApp: ("none"),
-    scheduler: ("none"),
-    tweeter: ("none"),
-    jungle: ("none")
+    nbaDashboard: "none",
+    website: "none",
+    buySellApp: "none",
+    scheduler: "none",
+    tweeter: "none",
+    jungle: "none",
   })
 
   useEffect(() => {
-    const url0 = axios.get(`https://raw.githubusercontent.com/DeonLeer/NBA-Dashboard/master/README.md`)
-    const url1 = axios.get(`https://raw.githubusercontent.com/DeonLeer/website/master/README.md`)
-    const url2 = axios.get(`https://raw.githubusercontent.com/DeonLeer/buy-sell-app/master/README.md`)
-    const url3 = axios.get(`https://raw.githubusercontent.com/DeonLeer/scheduler/master/README.md`)
-    const url4 = axios.get(`https://raw.githubusercontent.com/DeonLeer/tweeter/master/README.md`)
-    const url5 = axios.get(`https://raw.githubusercontent.com/DeonLeer/jungle/master/README.md`)
-    const url6 = axios.get(`https://api.github.com/repos/deonleer/nba-dashboard`)
-    const url7= axios.get(`https://api.github.com/repos/deonleer/website`)
-    const url8 = axios.get(`https://api.github.com/repos/deonleer/buy-sell-app`)
+    const url0 = axios.get(
+      `https://raw.githubusercontent.com/DeonLeer/NBA-Dashboard/master/README.md`
+    )
+    const url1 = axios.get(
+      `https://raw.githubusercontent.com/DeonLeer/website/master/README.md`
+    )
+    const url2 = axios.get(
+      `https://raw.githubusercontent.com/DeonLeer/buy-sell-app/master/README.md`
+    )
+    const url3 = axios.get(
+      `https://raw.githubusercontent.com/DeonLeer/scheduler/master/README.md`
+    )
+    const url4 = axios.get(
+      `https://raw.githubusercontent.com/DeonLeer/tweeter/master/README.md`
+    )
+    const url5 = axios.get(
+      `https://raw.githubusercontent.com/DeonLeer/jungle/master/README.md`
+    )
+    const url6 = axios.get(
+      `https://api.github.com/repos/deonleer/nba-dashboard`
+    )
+    const url7 = axios.get(`https://api.github.com/repos/deonleer/website`)
+    const url8 = axios.get(
+      `https://api.github.com/repos/deonleer/buy-sell-app`
+    )
     const url9 = axios.get(`https://api.github.com/repos/deonleer/scheduler`)
     const url10 = axios.get(`https://api.github.com/repos/deonleer/tweeter`)
     const url11 = axios.get(`https://api.github.com/repos/deonleer/jungle`)
@@ -61,87 +88,152 @@ export default function Projects(props) {
       Promise.resolve(url8),
       Promise.resolve(url9),
       Promise.resolve(url10),
-      Promise.resolve(url11)
-    ])
-      .then((all) => {
-        setReadMe(prev => ({
-          ...prev,
-          nbaDashboard: all[0].data,
-          website: all[1].data,
-          buySellApp: all[2].data,
-          scheduler: all[3].data,
-          tweeter: all[4].data,
-          jungle: all[5].data
-        }))
-        setOverview(prev => ({
-          ...prev,
-          nbaDashboard: all[6].data,
-          website: all[7].data,
-          buySellApp: all[8].data,
-          scheduler: all[9].data,
-          tweeter: all[10].data,
-          jungle: all[11].data
-        }))
-        setLoading(false)
-      })
+      Promise.resolve(url11),
+    ]).then((all) => {
+      setReadMe((prev) => ({
+        ...prev,
+        nbaDashboard: all[0].data,
+        website: all[1].data,
+        buySellApp: all[2].data,
+        scheduler: all[3].data,
+        tweeter: all[4].data,
+        jungle: all[5].data,
+      }))
+      setOverview((prev) => ({
+        ...prev,
+        nbaDashboard: all[6].data,
+        website: all[7].data,
+        buySellApp: all[8].data,
+        scheduler: all[9].data,
+        tweeter: all[10].data,
+        jungle: all[11].data,
+      }))
+      setLoading(false)
+    })
   }, [])
 
   const toggleDisplay = (project) => {
-    console.log('toggling', project)
-    if(display[project.project] === ("none")) {
-      console.log('display=nun')
-      setDisplay(prev => ({
+    console.log("toggling", project)
+    if (display[project.project] === "none") {
+      console.log("display=nun")
+      setDisplay((prev) => ({
         ...prev,
-        [project.project]: ("block")
+        [project.project]: "block",
       }))
     } else {
-      console.log('other')
-      setDisplay(prev => ({
+      console.log("other")
+      setDisplay((prev) => ({
         ...prev,
-        [project.project]: ("none")
+        [project.project]: "none",
       }))
     }
   }
 
-  if (loading) return (null)
+  if (loading) return null
 
-  const projectStyle = {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    minHeight: '25vh',
-    width: '30vw',
-    border: 'solid',
-    background: 'grey'
-
-  }
+  const projectStyle = 
+    props.theme === "light" ? 
+    {
+      width: "30vw",
+      height: "100%",
+    }
+    :
+    {
+      width: "30vw",
+      height: "100%",
+      backgroundColor: 'black',
+      color: 'white'
+    }
 
   return (
-      <div className="Projects">
-        <div>
-          <h1>Projects</h1>
-        </div>
-        <div>
-          <p>Here are 6 of my recent projects that I'm most proud of. I've included all github links as well as a toggling render of each ReadMe file.</p>
-        </div>
-        <div className="ProjectsList">
-            {Object.keys(overview).map((project) => (
-              <div style={projectStyle}>
-                <h2 style={{margin: '5px'}}>{stringConverter(project)}</h2>
-                <a href={overview[project].html_url}>Github Link</a>
-                <p>{overview[project].description}</p>
-                <button style={{width: '20%'}} onClick={() => toggleDisplay({project})}>{(display[project] === 'none') ? 'View ReadME' : 'Close ReadMe'}</button>
-                <div style={{ display: display[project]}}>
-                  <ReactMarkdown source={readMe[project]} />
-                </div>
-              </div>
-            ))}
-        </div>
-        <div className="ViewMore" onClick={props.viewMore}>
-          <footer>Next</footer>
-          <ArrowDropDownIcon />
-        </div>
+    <div className="Projects">
+      <div>
+        <h1>Projects</h1>
+      </div>
+      <div>
+        <p>
+          Here are 6 of my recent projects that I'm most proud of. I've included
+          all github links as well as a toggling render of each ReadMe file.
+        </p>
       </div>
 
+      <Grid
+        container
+        justify="center"
+        spacing={3}
+        //xs={} TODO: set how many grid items at each breakpoint
+        //sm={}
+        //md={}
+      >
+        {Object.keys(overview).map((project) => (
+          <Grid item>
+            <Card raised style={projectStyle}>
+              <CardActionArea>
+                <CardMedia style={{height: 140}} title={project} />
+
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2" >
+                    {stringConverter(project)}
+                  </Typography>
+
+                  {/* <h2 style={{ margin: "5px" }}>{stringConverter(project)}</h2> */}
+                  <Typography
+                    variant="body2"
+                    color="inherit"
+                    component="p"
+                  >
+                    {overview[project].description}
+                  </Typography>
+
+                  <CardActions>
+                    <Button size="small" color="primary">
+                      Github Link
+                    </Button>
+                    <Button
+                      size="small"
+                      color="primary"
+                      onClick={() => toggleDisplay({ project })}
+                    >
+                      {display[project] === "none"
+                        ? "View ReadME"
+                        : "Close ReadMe"}
+                    </Button>
+                  </CardActions>
+
+                  {/* <a
+                  href={overview[project].html_url}
+                  target="_blank"
+                  rel="noreferrer"
+                  >
+                  Github Link
+                </a> */}
+                  {/* <p>{overview[project].description}</p> */}
+                  {/* <Button
+                  style={{ width: "20%" }}
+                  onClick={() => toggleDisplay({ project })}
+                  >
+                  {display[project] === "none" ? "View ReadME" : "Close ReadMe"}
+                </Button> */}
+
+                  {/* TODO: Modal to open and serve up readme
+                 Modal props: source (markdown source), isOpen
+                 you'll need to store whether or not the Modal is open
+                 and just differ the readme source for each 
+                */}
+                  <div style={{ display: display[project] }}>
+                    <ReactMarkdown source={readMe[project]} />
+                  </div>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
+
+      <div className="ViewMore" onClick={props.viewMore}>
+        <footer>Next</footer>
+        <ArrowDropDownIcon />
+      </div>
+    </div>
   )
 }

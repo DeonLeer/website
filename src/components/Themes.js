@@ -10,4 +10,10 @@ export const darkTheme = {
   text: "#FAFAFA",
   toggleBorder: "#6B8096",
   background: "#999",
+  
+  // Dark-theme version of <Card>
+  card: {
+    // Example
+    backgroundColor: 'blue',
+  }
 }

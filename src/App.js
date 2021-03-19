@@ -82,6 +82,7 @@ export default function App() {
         </div>
         <div ref={projects}>
           <Projects
+          theme={theme}
           viewMore={() => scroll(resume)}
           />
         </div>

@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import emailjs from 'emailjs-com'
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp'
+import ExternalLink from '../ExternalLink'
 
 export default function ContactMe(props) {
 
@@ -43,17 +44,17 @@ export default function ContactMe(props) {
           </form>
         </div>
         <div className="github">
-          <a href="http://github.com/deonleer">
+          <ExternalLink href="http://github.com/deonleer">
             <img src={props.logo} alt="github"/>
-          </a>
+          </ExternalLink>
         </div>
         <div className="linkedin">
-          <a href="https://www.linkedin.com/in/deon-leer-b2089916b/">
+          <a href="https://www.linkedin.com/in/deon-leer-b2089916b/" target="_blank" rel="noreferrer">
             <img src='/logo5.png' alt="linkedin"/>
           </a>
         </div>
         <div className="twitter">
-          <a href="https://www.twitter.com/leerdevs" style={{color: '#1DA1F2', textDecoration: 'none'}}>
+          <a href="https://www.twitter.com/leerdevs" target="_blank" rel="noreferrer" style={{color: '#1DA1F2', textDecoration: 'none'}}>
             <img src="/screenshot_for_website.png" alt="twitter icon"/>
             <h1>Follow Me!</h1>
           </a>
