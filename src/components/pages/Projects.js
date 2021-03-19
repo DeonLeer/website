@@ -17,6 +17,15 @@ import {
 // console.log(theGoat)
 
 export default function Projects(props) {
+  const projectImages = [
+    'https://raw.githubusercontent.com/celsinga/nba-dashboard/master/react-front-end/public/Screenshots/Screen%20Shot%202021-03-01%20at%202.28.31%20PM.png',
+    '/git_photos/websitesc.png',
+    'https://raw.githubusercontent.com/celsinga/buy-sell-app/master/public/Screenshots/search.png',
+    'https://raw.githubusercontent.com/DeonLeer/scheduler/master/docs/initial.png',
+    'https://raw.githubusercontent.com/DeonLeer/tweeter/master/docs/desktop.png',
+    'https://raw.githubusercontent.com/DeonLeer/tweeter/master/docs/desktop.png'
+  ]
+
   const [loading, setLoading] = useState(true)
 
   const [readMe, setReadMe] = useState({
@@ -165,11 +174,11 @@ export default function Projects(props) {
         //sm={}
         //md={}
       >
-        {Object.keys(overview).map((project) => (
+        {Object.keys(overview).map((project, index) => (
           <Grid item>
             <Card raised style={projectStyle}>
               <CardActionArea>
-                <CardMedia style={{height: 140}} title={project} />
+                <CardMedia style={{height: 140}} title={project} image={projectImages[index]}/>
 
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2" >
