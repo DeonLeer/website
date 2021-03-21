@@ -12,6 +12,7 @@ import {
   CardActions,
   Typography,
   CardMedia,
+  Link,
 } from "@material-ui/core"
 // import theGoat from "../../image0.png"
 // console.log(theGoat)
@@ -121,6 +122,8 @@ export default function Projects(props) {
     })
   }, [])
 
+  console.log(overview.jungle)
+
   const toggleDisplay = (project) => {
     console.log("toggling", project)
     if (display[project.project] === "none") {
@@ -157,7 +160,7 @@ export default function Projects(props) {
   return (
     <div className="Projects">
       <div>
-        <h1>Projects</h1>
+        <h1 style={{ marginBottom: '2px', marginTop: '3.5px'}}>Projects</h1>
       </div>
       <div>
         <p>
@@ -178,7 +181,7 @@ export default function Projects(props) {
           <Grid item>
             <Card raised style={projectStyle}>
               <CardActionArea>
-                <CardMedia style={{height: 140}} title={project} image={projectImages[index]}/>
+                <CardMedia style={{height: 120}} title={project} image={projectImages[index]}/>
 
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2" >
@@ -196,7 +199,10 @@ export default function Projects(props) {
 
                   <CardActions>
                     <Button size="small" color="primary">
-                      Github Link
+                      <Link href={overview[project].svn_url} >
+                        GITHUB LINK
+                      </Link>
+
                     </Button>
                     <Button
                       size="small"

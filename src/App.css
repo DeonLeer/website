@@ -25,6 +25,7 @@ body {
   align-items: flex-start;
 }
 .Navbar {
+  height: 12vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -33,7 +34,7 @@ body {
   padding-right: 5px;
 }
 .Navbar img {
-  width: 12vw;
+  height: 9vh;
 }
 .NavbarPosition {
   position: fixed;
@@ -86,11 +87,12 @@ body {
 /* Bio */
 
 .Bio {
-  height: 82.5vh;
+  min-height: 85vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  font-size: calc(0.6em + 0.6vw)
 }
 .BioContent {
   display: flex;
@@ -137,7 +139,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  min-height: 70vh;
+  min-height: 85vh;
 }
 /* Experience */
 .Experience {

@@ -40,7 +40,7 @@ export default function App() {
       behavior: "smooth",
       // Checking reference.current isn't falsy before grabbing .offsetTop
       top: reference.current
-        ? reference.current.offsetTop - windowHeight * 0.17
+        ? reference.current.offsetTop - windowHeight * 0.12
         : undefined,
     })
   }
@@ -88,16 +88,6 @@ export default function App() {
         </div>
         <div ref={resume}>
           <Resume
-          viewMore={() => scroll(experience)}
-          />
-        </div>
-        <div ref={experience}>
-          <Experience
-          viewMore={() => scroll(freelanceServices)}
-          />
-        </div>
-        <div ref={freelanceServices}>
-          <FreelanceServices
           viewMore={() => scroll(contactMe)}
           />
         </div>

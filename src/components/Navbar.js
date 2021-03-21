@@ -6,16 +6,13 @@ export default function Navbar(props) {
     props.notMode === "Light"
       ? { backgroundColor: "grey" }
       : { backgroundColor: "white" }
-  const buttonStyle =
-    props.notMode === "Light"
-      ? { color: "white", width: "100%" }
-      : { width: "100%" }
+  const buttonStyle = { width: "100%" }
 
   return (
     <div className="Navbar" id="Navbar">
       <div className="NameAndToggle">
-        <Button onClick={props.setMode}>{props.notMode} Mode</Button>
-        <img src={props.image} alt="logo"/>
+        <Button onClick={props.setMode} style={{ height: '1vw', backgroundColor: 'white' }}>{props.notMode} Mode</Button>
+        <img src={props.image} alt="logo" />
       </div>
       <div className="NavLinks">
         <table>
@@ -33,18 +30,6 @@ export default function Navbar(props) {
             <td style={tdStyle}>
               <Button onClick={props.resume} style={buttonStyle}>
                 Resume
-              </Button>
-            </td>
-          </tr>
-          <tr>
-            <td style={tdStyle}>
-              <Button onClick={props.experience} style={buttonStyle}>
-                Experience
-              </Button>
-            </td>
-            <td style={tdStyle}>
-              <Button onClick={props.freelanceServices} style={buttonStyle}>
-                Freelance Services
               </Button>
             </td>
             <td style={tdStyle}>

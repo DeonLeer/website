@@ -9,7 +9,7 @@ export default function Bio(props) {
       </div>
       <div className="BioContent">
         <div className="BioImage">
-          <img alt="Me" src="/portfolio1.png" />
+          <img alt="Me" src="/portfolio1.png" style={{ width: '30vw', height: '60vh' }}/>
         </div>
         <div className="BioText">
           <p>
