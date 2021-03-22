@@ -6,8 +6,8 @@ import "./AboutMe.scss"
 export default function AboutMe(props) {
   return (
     <div className="AboutMe">
-      <div className="AboutMeContent">
-        <div className="text1">
+      <div className="text1">
+        <div className="text2" >
           <h1>Hi, My Name is Deon Leer</h1>
           <h2>I'm a Full Stack JavaScript Developer,</h2>
           <h2>and This is my Portfolio Site</h2>

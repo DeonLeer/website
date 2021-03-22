@@ -5,6 +5,7 @@ import { GlobalStyle } from "./components/GlobalStyle"
 import { lightTheme, darkTheme } from "./components/Themes"
 
 import Navbar from "./components/Navbar"
+import NavbarMobile from "./components/NavbarMobile"
 import AboutMe from "./components/pages/AboutMe"
 // import Experience from "./components/pages/Experience"
 // import FreelanceServices from "./components/pages/FreelanceServices"
@@ -32,6 +33,9 @@ export default function App() {
   const resume = useRef(null)
   const contactMe = useRef(null)
   const bio = useRef(null)
+
+  const deviceWidth = window.innerWidth
+  console.log(deviceWidth)
 
   const scroll = (reference) => {
     const windowHeight = window.innerHeight
@@ -62,7 +66,7 @@ export default function App() {
               : { backgroundColor: "#363537" }
           }
         >
-          <Navbar
+          <NavbarMobile
             image={theme === "light" ? blackLogo : whiteLogo}
             setMode={themeToggler}
             notMode={notTheme}

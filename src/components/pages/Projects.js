@@ -173,6 +173,10 @@ export default function Projects(props) {
         container
         justify="center"
         spacing={3}
+        lg={12}
+        md={9}
+        sm={6}
+        xs={6}
         //xs={} TODO: set how many grid items at each breakpoint
         //sm={}
         //md={}
