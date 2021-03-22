@@ -1,13 +1,24 @@
 import React from "react"
 import Button from "@material-ui/core/Button"
-import Drawer from "@material-ui/core/Drawer"
+import NavbarDrawer from './NavbarDrawer'
 
 export default function Navbar(props) {
-  const tdStyle =
-    props.notMode === "Light"
-      ? { backgroundColor: "grey" }
-      : { backgroundColor: "white" }
-  const buttonStyle = { width: "100%" }
+  // const tdStyle =
+  //   props.notMode === "Light"
+  //     ? { backgroundColor: "grey" }
+  //     : { backgroundColor: "white" }
+  // const buttonStyle = { width: "100%" }
+
+  const pageArray = [
+    {page: "About Me",
+    onClick: props.aboutMe},
+    {page: "Projects",
+    onClick: props.projects},
+    {page: "Resume",
+    onClick: props.resume},
+    {page: "Contact Me",
+    onClick: props.contactMe}
+  ]
 
   return (
     <div className="Navbar" id="Navbar">
@@ -16,9 +27,8 @@ export default function Navbar(props) {
         <img src={props.image} alt="logo" />
       </div>
       <div className="NavLinks">
-        <Drawer 
-          anchor={"right"}
-          
+        <NavbarDrawer 
+          pageArray={pageArray}
         />
       </div>
     </div>

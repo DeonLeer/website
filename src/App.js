@@ -49,6 +49,8 @@ export default function App() {
     })
   }
 
+
+
   const whiteLogo = "/logo_white.png"
   const blackLogo = "/logo_black.png"
   const gitLogoDark = "/github_logo_dark.png"
@@ -66,7 +68,8 @@ export default function App() {
               : { backgroundColor: "#363537" }
           }
         >
-          <NavbarMobile
+          {deviceWidth < 768 && 
+            <NavbarMobile
             image={theme === "light" ? blackLogo : whiteLogo}
             setMode={themeToggler}
             notMode={notTheme}
@@ -76,7 +79,21 @@ export default function App() {
             experience={() => scroll(experience)}
             freelanceServices={() => scroll(freelanceServices)}
             contactMe={() => scroll(contactMe)}
-          />
+            />
+          }
+          {deviceWidth >= 768 && 
+            <Navbar
+            image={theme === "light" ? blackLogo : whiteLogo}
+            setMode={themeToggler}
+            notMode={notTheme}
+            aboutMe={() => scroll(bio)}
+            projects={() => scroll(projects)}
+            resume={() => scroll(resume)}
+            experience={() => scroll(experience)}
+            freelanceServices={() => scroll(freelanceServices)}
+            contactMe={() => scroll(contactMe)}
+            />
+          }
         </div>
         <div ref={aboutMe}>
           <AboutMe onClickViewMore={() => scroll(bio)} />
