@@ -183,7 +183,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 81vh;
+  min-height: 85vh;
 }
 .contacts {
   height: 70vh;
