@@ -12,8 +12,8 @@ export default function AboutMe(props) {
           <h2>I'm a Full Stack JavaScript Developer,</h2>
           <h2>and This is my Portfolio Site</h2>
         </div>
-        <div className="image1">
-          <img src="/portfolio2.png" alt="me:)"/>
+        <div className="image">
+          <img className="image1" src="/portfolio2.png" alt="me:)"/>
         </div>
       </div>
       <div className="ViewMore" onClick={props.onClickViewMore}>
