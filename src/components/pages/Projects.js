@@ -183,7 +183,7 @@ export default function Projects(props) {
       >
         {Object.keys(overview).map((project, index) => (
           <Grid item>
-            <Card raised style={projectStyle}>
+            <Card raised style={projectStyle} >
               <CardActionArea>
                 <CardMedia style={{height: 120}} title={project} image={projectImages[index]}/>
 
